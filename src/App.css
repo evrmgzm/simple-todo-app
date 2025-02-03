@@ -1,0 +1,136 @@
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #282c34;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 0.5s ease;
+  font-size: calc(10px + 2vmin);
+  overflow-x: hidden;
+  overflow-y: hidden;
+  overflow-wrap: break-word;
+  box-sizing: border-box;
+  background-clip: padding-box;
+  padding: 20px;
+}
+
+.todo-create {
+  position: fixed;
+  top: 20px;
+  /* Sayfanın üstünden 20px boşluk bırakır */
+  left: 50%;
+  /* Sayfanın yatayda ortasında başlar */
+  transform: translateX(-50%);
+  /* Kendini yatayda tam olarak ortalar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  /* Kenarlardan boşluk bırakmak için genişliği %90 yapın */
+  max-width: 600px;
+  /* Maksimum genişlik belirleyin (isteğe bağlı) */
+  margin-bottom: 20px;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  border-radius: 25px;
+  /* Oval (yuvarlak köşeli) yapmak için */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* Gölge ekleyerek daha belirgin hale getirin */
+  z-index: 1000;
+  /* Diğer içeriklerin üzerinde olmasını sağlar */
+  overflow: auto;
+}
+
+.todo-create input {
+  flex: 1;
+  /* Input alanının genişliğini esnek yapar */
+  padding: 10px;
+  border: none;
+  border-radius: 12px;
+  /* Input köşelerini yuvarlak yapar */
+  margin-right: 10px;
+  /* Input ile buton arasında boşluk bırakır */
+  font-size: 16px;
+  outline: none;
+  /* Odaklandığında çıkan çerçeveyi kaldırır */
+  z-index: 1000;
+  /* Stay on top while scrolling */
+}
+
+.todo-create button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 12px;
+  /* Buton köşelerini yuvarlak yapar */
+  background-color: #61dafb;
+  /* Buton rengi */
+  color: #282c34;
+  /* Buton yazı rengi */
+  font-size: 16px;
+  cursor: pointer;
+  /* Butonun üzerine gelindiğinde imleç değişir */
+  transition: background-color 0.3s ease;
+  /* Buton rengi geçiş efekti */
+}
+
+.todo-create button:hover {
+  background-color: #21a1f1;
+  /* Butonun üzerine gelindiğinde renk değişir */
+}
+
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.todo-actions {
+  display: flex;
+  gap: 10px; /* Butonlar arasında boşluk bırakır */
+}
+
+.edit-input {
+  flex: 1; /* Input alanını genişletir */
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  background-color: #444;
+  color: white;
+  margin-right: 10px; /* Butonlarla arasında boşluk bırakır */
+}
+
+.edit-btn,
+.delete-btn,
+.complete-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.edit-btn:hover {
+  color: #61dafb; /* Edit butonunun hover rengi */
+}
+
+.delete-btn:hover {
+  color: #ff6b6b; /* Delete butonunun hover rengi */
+}
+
+.complete-btn:hover {
+  color: #5cb85c; /* Complete butonunun hover rengi */
+}
